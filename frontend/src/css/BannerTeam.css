@@ -1,0 +1,46 @@
+.custom1-slider .slick-slide {
+  padding: 0 15px; /* Thêm khoảng cách ngang giữa các slide */
+  box-sizing: border-box; /* Đảm bảo padding không ảnh hưởng đến kích thước slide */
+}
+
+.custom1-slider .slick-list {
+  margin: 0 -15px; /* Đảm bảo nội dung không bị tràn ra ngoài */
+}
+
+.custom1-slider .slick-prev,
+.custom1-slider .slick-next {
+  position: absolute;
+  top: 50%; /* Căn giữa dọc */
+  transform: translateY(-150%); /* Đảm bảo nút nằm ở giữa dọc */
+  z-index: 2; /* Đặt nút trên các phần tử khác */
+  background-color: rgba(0, 0, 0, 0.5); /* Màu nền mờ */
+  border-radius: 50%; /* Nút hình tròn */
+  padding: 10px; /* Tăng kích thước nút */
+  color: white; /* Màu nút */
+}
+
+.custom1-slider .slick-prev {
+  left: -50px; /* Đặt nút trái cách lề trái */
+}
+
+.custom1-slider .slick-next {
+  right: -50px; /* Đặt nút phải cách lề phải */
+}
+
+.custom1-slider .slick-prev:hover,
+.custom1-slider .slick-next:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Thay đổi màu khi hover */
+}
+
+@media (max-width: 768px) {
+  .custom1-slider .slick-prev,
+  .custom1-slider .slick-next {
+    left: -30px;
+    right: -30px; 
+    
+  }
+
+  .custom1-slider .slick-slide {
+    padding: 0 10px; /* Giảm khoảng cách giữa các hình ảnh trên màn hình nhỏ */
+  }
+}

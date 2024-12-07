@@ -1,0 +1,21 @@
+@keyframes fadeInScaleColor {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+    color: #ff0000; /* Red */
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+    color: #ff9900; /* Orange */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    color: #33cc33; /* Green */
+  }
+}
+
+.animate-fadeInScaleColor {
+  animation: fadeInScaleColor 3s ease-out infinite;
+}

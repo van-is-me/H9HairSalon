@@ -1,0 +1,70 @@
+/* Đảm bảo slider container có không gian dưới navbar */
+.slider-container {
+  position: relative;
+  max-width: 100%; /* Chiếm 100% chiều rộng */
+  margin: 0 auto; /* Căn giữa slider */
+  padding-top: 80px; /* Tạo khoảng cách đủ để nội dung không bị che khuất bởi navbar */
+  z-index: 1; /* Đảm bảo slider có z-index thấp hơn navbar */
+}
+
+/* Đảm bảo ảnh banner nằm đúng vị trí */
+.slider-container img {
+  width: 100%; /* Chiều rộng ảnh chiếm 100% container */
+  height: auto; /* Giữ tỉ lệ ảnh */
+  object-fit: cover;
+  object-position: center; /* Căn giữa ảnh trong slider */
+}
+
+/* Nút điều hướng slick */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10; /* Đảm bảo các nút điều hướng luôn ở trên ảnh */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+/* Responsive: Mobile */
+@media (max-width: 768px) {
+  .slider-container {
+    padding-top: 64px; /* Không có padding-top trên mobile */
+  }
+
+  .slick-prev,
+  .slick-next {
+    display: none !important; /* Ẩn các nút điều hướng trên mobile */
+  }
+
+  .slick-dots{
+    margin-top: -30px;
+    margin-bottom: 8px;
+  }
+}
+
+.slick-dots{
+  padding-bottom: 24px;
+  position: relative;
+}

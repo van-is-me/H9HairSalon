@@ -1,0 +1,44 @@
+/* Navbar styling */
+.navbar {
+  position: fixed; /* Cố định navbar ở trên cùng */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100; /* Đảm bảo navbar có z-index cao hơn slider */
+}
+
+/* Navbar Start */
+/* Navbar Start */
+.navbar-start {
+  display: flex;
+  justify-content: space-between;  /* Menu button sẽ nằm bên trái */
+  align-items: center;
+  width: 100%;
+}
+
+/* Logo */
+.navbar-start .btn-ghost {
+  flex-grow: 1;
+  text-align: center; /* Căn giữa logo trong navbar */
+}
+
+.navbar-start img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .navbar-start {
+    justify-content: space-between;
+  }
+
+  .navbar-start .btn-ghost {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+
